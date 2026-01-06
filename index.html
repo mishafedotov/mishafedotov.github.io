@@ -16,7 +16,7 @@
             color: #000;
         }
 
-        /* top header */
+        /* title / logo */
         .header {
             position: absolute;
             top: 30px;
@@ -26,58 +26,5 @@
             text-transform: lowercase;
         }
 
-        /* center navigation */
-        .nav {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .nav-inner {
-            display: flex;
-            gap: 80px;
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: #000;
-            font-size: 26px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            position: relative;
-        }
-
-        /* underline on hover (ssense-like) */
-        .nav a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -6px;
-            width: 0;
-            height: 1px;
-            background: #000;
-            transition: width 0.3s ease;
-        }
-
-        .nav a:hover::after {
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- logo / name -->
-    <div class="header">misha fedotov</div>
-
-    <!-- main navigation -->
-    <div class="nav">
-        <div class="nav-inner">
-            <a href="art.html">art</a>
-            <a href="ad.html">ad</a>
-            <a href="gamedev.html">gamedev</a>
-        </div>
-    </div>
-
-</body>
-</html>
+        /* left catalog navigation */
+        .catalog {
