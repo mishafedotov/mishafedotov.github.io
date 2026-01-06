@@ -4,50 +4,46 @@
     <meta charset="UTF-8">
     <title>misha fedotov</title>
 
-    <!-- Neue Montreal -->
-    <link href="https://fonts.cdnfonts.com/css/neue-montreal" rel="stylesheet">
+    <!-- Utah Condensed -->
+    <link href="https://fonts.cdnfonts.com/css/utah-condensed" rel="stylesheet">
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
             height: 100vh;
-            background-color: #f5f3ef;
-            font-family: 'Neue Montreal', Arial, sans-serif;
+            background-color: #FFFFF;
+            font-family: 'Utah Condensed', Arial, sans-serif;
             color: #000;
         }
 
-        /* title */
+        /* ===== SHARED MENU ===== */
+
         .header {
-            position: absolute;
+            position: fixed;
             top: 30px;
             left: 40px;
             font-size: 30px;
             font-weight: 700;
-            letter-spacing: 0px;
+            letter-spacing: 1px;
             text-transform: lowercase;
             font-style: italic;
         }
 
-        /* left catalog */
         .catalog {
-            position: absolute;
+            position: fixed;
             top: 120px;
             left: 40px;
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 22px;
         }
 
         .catalog a {
+            font-size: 26px;
+            letter-spacing: 4px;
+            text-transform: lowercase;
             text-decoration: none;
             color: #000;
-            font-size: 24px;
-            letter-spacing: 0,5px;
-            text-transform: lowercase;
             border-bottom: 1px solid transparent;
             width: fit-content;
             font-style: italic;
@@ -57,33 +53,39 @@
             border-bottom: 1px solid #000;
         }
 
-        /* socials bottom left */
         .socials {
-            position: absolute;
+            position: fixed;
             bottom: 40px;
             left: 40px;
             display: flex;
-            gap: 24px;
+            gap: 20px;
             flex-direction: column;
+
         }
 
         .socials a {
+            font-size: 26px;
+            letter-spacing: 1px;
+            text-transform: lowercase;
             text-decoration: none;
             color: #000;
-            font-size: 24px;
-            letter-spacing: 0,5px;
-            text-transform: lowercase;
             border-bottom: 1px solid transparent;
-            font-style: italic;
         }
 
         .socials a:hover {
             border-bottom: 1px solid #000;
         }
+
+        /* ===== MAIN EMPTY SPACE ===== */
+
+        .empty {
+            height: 100vh;
+        }
     </style>
 </head>
 <body>
 
+    <!-- shared menu -->
     <div class="header">misha fedotov</div>
 
     <nav class="catalog">
@@ -93,11 +95,13 @@
     </nav>
 
     <div class="socials">
-        <a href="https://t.me/USERNAME" target="_blank">telegram</a>
-        <a href="https://soundcloud.com/USERNAME" target="_blank">soundcloud</a>
-        <a href="https://behance.net/USERNAME" target="_blank">behance</a>
-        <a href="https://instagram.com/USERNAME" target="_blank">instagram</a>
+        <a href="https://t.me/mishafedotov" target="_blank">telegram</a>
+        <a href="https://soundcloud.com/misha_fedotov/" target="_blank">soundcloud</a>
+        <a href="https://behance.net/gallery/151338065/Portfolio" target="_blank">behance</a>
+        <a href="https://instagram.com/mishshaa" target="_blank">instagram</a>
     </div>
+
+    <div class="empty"></div>
 
 </body>
 </html>
