@@ -28,3 +28,41 @@
 
         /* left catalog navigation */
         .catalog {
+            position: absolute;
+            top: 120px;
+            left: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .catalog a {
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            letter-spacing: 1px;
+            text-transform: lowercase;
+            border-bottom: 1px solid transparent;
+            width: fit-content;
+        }
+
+        /* underline WITHOUT animation */
+        .catalog a:hover {
+            border-bottom: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- title -->
+    <div class="header">misha fedotov</div>
+
+    <!-- catalog navigation -->
+    <nav class="catalog">
+        <a href="art.html">ART</a>
+        <a href="ad.html">AD</a>
+        <a href="gamedev.html">GAMEDEV</a>
+    </nav>
+
+</body>
+</html>
