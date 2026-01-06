@@ -19,9 +19,9 @@
         /* ===== SHARED MENU ===== */
 
         .header {
-            display: grid;
-            align-items: end; /* Выравнивает по нижнему краю */
-            justify-items: center;
+            position: fixed;
+            bottom: 0; /* Прижимает к низу */
+            left: 50%; 
             font-size: 180px;
             font-weight: 700;
             letter-spacing: 1px;
@@ -55,7 +55,7 @@
 
         .socials {
             position: fixed;
-            top: 200px;
+            top: 180px;
             left: 40px;
             display: flex;
             gap: 20px;
