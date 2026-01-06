@@ -1,59 +1,82 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Misha Fedotov — Portfolio</title>
+    <title>misha fedotov</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             height: 100vh;
             background-color: #f5f3ef;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
             font-family: Arial, Helvetica, sans-serif;
             color: #000;
         }
 
-        .title {
-            font-size: 48px;
-            letter-spacing: 2px;
-            margin-bottom: 300px;
+        /* top header */
+        .header {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            font-size: 22px;
+            letter-spacing: 1px;
             text-transform: lowercase;
         }
 
-        .buttons {
+        /* center navigation */
+        .nav {
+            height: 100vh;
             display: flex;
-            gap: 40px;
+            align-items: center;
+            justify-content: center;
         }
 
-        .btn {
-            padding: 22px 60px;
-            border: 1px solid #f5f3ef;
-            background: none;
+        .nav-inner {
+            display: flex;
+            gap: 80px;
+        }
+
+        .nav a {
             text-decoration: none;
             color: #000;
-            font-size: 20px;
-            letter-spacing: 2px;
-            text-transform: lowercase;
-            transition: all 0.3s ease;
+            font-size: 26px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            position: relative;
         }
 
-        .btn:hover {
+        /* underline on hover (ssense-like) */
+        .nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 1px;
             background: #000;
-            color: #f5f3ef;
+            transition: width 0.3s ease;
+        }
+
+        .nav a:hover::after {
+            width: 100%;
         }
     </style>
 </head>
 <body>
 
-    <div class="title">misha fedotov</div>
+    <!-- logo / name -->
+    <div class="header">misha fedotov</div>
 
-    <div class="buttons">
-        <a class="btn" href="art.html">art</a>
-        <a class="btn" href="ad.html">ad</a>
-        <a class="btn" href="gamedev.html">gamedev</a>
+    <!-- main navigation -->
+    <div class="nav">
+        <div class="nav-inner">
+            <a href="art.html">art</a>
+            <a href="ad.html">ad</a>
+            <a href="gamedev.html">gamedev</a>
+        </div>
     </div>
 
 </body>
