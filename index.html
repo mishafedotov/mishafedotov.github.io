@@ -16,15 +16,15 @@
             color: #000;
         }
 
-        /* ===== LEFT COLUMN (OUR LEGACY STYLE) ===== */
+        /* ===== LEFT COLUMN MENU ===== */
 
         .menu {
             position: fixed;
-            top: 30px;
+            top: 80px;            /* опущено ниже */
             left: 40px;
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 18px;            /* ОДИНАКОВЫЙ отступ везде */
         }
 
         .menu a {
@@ -41,30 +41,19 @@
             border-bottom: 1px solid #000;
         }
 
-        /* title / home link */
         .menu .title {
             font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        /* socials spacing */
-        .menu .divider {
-            height: 24px;
         }
     </style>
 </head>
 <body>
 
-    <!-- LEFT COLUMN MENU -->
     <nav class="menu">
-        <!-- title as home button -->
         <a href="index.html" class="title">misha fedotov</a>
 
         <a href="art.html">art</a>
         <a href="ad.html">ad</a>
         <a href="gamedev.html">gamedev</a>
-
-        <div class="divider"></div>
 
         <a href="https://t.me/mishafedotov" target="_blank">telegram</a>
         <a href="https://soundcloud.com/misha_fedotov/" target="_blank">soundcloud</a>
