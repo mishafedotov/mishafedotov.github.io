@@ -1,196 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>art — misha fedotov</title>
+    <meta charset="UTF-8">
+    <title>art — misha fedotov</title>
 
-<link href="https://fonts.cdnfonts.com/css/utah-condensed" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/utah-condensed" rel="stylesheet">
 
-<style>
-/* ================= BASE ================= */
+    <style>
+        /* ================= BASE ================= */
 
-:root {
-    --image-left: 530px;
-}
+        :root {
+            --image-left: 530px;
+        }
 
-* {
-    box-sizing: border-box;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-body {
-    margin: 0;
-    background-color: #ffffff;
-    font-family: 'Utah Condensed', Arial, sans-serif;
-    color: #000;
-}
+        body {
+            margin: 0;
+            background-color: #ffffff;
+            font-family: 'Utah Condensed', Arial, sans-serif;
+            color: #000;
+        }
 
-/* ================= MENU (СТАБИЛЬНЫЙ) ================= */
+        /* ================= MENU (СТАБИЛЬНЫЙ) ================= */
 
-.menu {
-    position: fixed;
-    top: 50%;
-    left: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
+        .menu {
+            position: fixed;
+            top: 50%;
+            left: 40px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
 
-.menu a {
-    font-size: 52px;
-    font-weight: 700;
-    display: flex;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #000;
-    width: fit-content;
-    line-height: 0.95;
-    border-bottom: 1px solid transparent;
-}
+        .menu a {
+            font-size: 52px;
+            font-weight: 700;
+            display: flex;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #000;
+            width: fit-content;
+            line-height: 0.95;
+            border-bottom: 1px solid transparent;
+        }
 
-.menu a:hover {
-    border-bottom: 1px solid #000;
-}
+        .menu a:hover {
+            border-bottom: 1px solid #000;
+        }
 
-.menu .contacts {
-    font-size: 18px;
-    text-transform: capitalize;
-    letter-spacing: 0.8px;
-    line-height: 1.1;
-}
+        .menu .contacts {
+            font-size: 18px;
+            text-transform: capitalize;
+            letter-spacing: 0.8px;
+            line-height: 1.1;
+        }
 
-/* ================= SECTIONS ================= */
+        /* ================= SECTIONS ================= */
 
-.section {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
+        .section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-.section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: var(--image-left);
-    right: 0;
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
-}
+        .section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: var(--image-left);
+            right: 0;
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
 
-/* Override for first section */
-.section:nth-of-type(1)::before {
-    background-image: url('art/what-am-i-carrying-1.jpg');
-}
+        /* Фоны для секций */
+        .section:nth-of-type(1)::before {
+            background-image: url('art/what-am-i-carrying-1.jpg');
+        }
 
-.section:nth-of-type(2)::before {
-    background-image: url('art/small-ship-big-voyage-1.jpg');
-}
+        .section:nth-of-type(2)::before {
+            background-image: url('art/small-ship-big-voyage-1.jpg');
+        }
 
-.section:nth-of-type(3)::before {
-    background-image: url('art/moscow-river-age-1.jpg');
-}
+        .section:nth-of-type(3)::before {
+            background-image: url('art/moscow-river-age-1.jpg');
+        }
 
-.section:nth-of-type(4)::before {
-    background-image: url('art/sage-of-the-sea-1.jpg');
-}
+        .section:nth-of-type(4)::before {
+            background-image: url('art/sage-of-the-sea-1.jpg');
+        }
 
-/* ТЕКСТ */
-.content {
-    position: relative;
-    z-index: 1;
-    margin-left: calc(var(--image-left) + 40px);
-    margin-right: 40px;
-    padding-top: 120px;
-    max-width: 520px;
-    color: #fff;
-}
+        /* ТЕКСТ */
+        .content {
+            position: relative;
+            z-index: 1;
+            margin-left: calc(var(--image-left) + 40px);
+            margin-right: 40px;
+            padding-top: 120px;
+            max-width: 520px;
+            color: #fff;
+        }
 
-h2 {
-    font-size: 52px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 0 0 24px 0;
-}
+        h2 {
+            font-size: 52px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0 0 24px 0;
+        }
 
-p {
-    font-size: 18px;
-    line-height: 1.4;
-    margin: 0 0 16px 0;
-}
+        p {
+            font-size: 18px;
+            line-height: 1.4;
+            margin: 0 0 16px 0;
+        }
 
-.content a {
-    color: #fff;
-    text-decoration: underline;
-}
+        .content a {
+            color: #fff;
+            text-decoration: underline;
+        }
 
-iframe {
-    width: 100%;
-    height: 180px;
-    border: none;
-    margin-top: 24px;
-}
-</style>
+        iframe {
+            width: 100%;
+            height: 180px;
+            border: none;
+            margin-top: 24px;
+        }
+    </style>
 </head>
 
 <body>
 
-<nav class="menu">
-    <a href="index.html">misha fedotov</a>
-    <a href="art.html">art</a>
-    <a href="ad.html">ad</a>
-    <a href="gamedev.html">gamedev</a>
+    <nav class="menu">
+        <a href="index.html">misha fedotov</a>
+        <a href="art.html">art</a>
+        <a href="ad.html">ad</a>
+        <a href="gamedev.html">gamedev</a>
 
-    <a href="https://t.me/mishafedotov    " target="_blank" class="contacts">Telegram</a>
-    <a href="https://soundcloud.com/misha_fedotov/    " target="_blank" class="contacts">Soundcloud</a>
-    <a href="https://behance.net/gallery/151338065/Portfolio    " target="_blank" class="contacts">Behance</a>
-    <a href="https://instagram.com/mishshaa    " target="_blank" class="contacts">Instagram</a>
-</nav>
+        <a href="https://t.me/mishafedotov    " target="_blank" class="contacts">Telegram</a>
+        <a href="https://soundcloud.com/misha_fedotov/    " target="_blank" class="contacts">Soundcloud</a>
+        <a href="https://behance.net/gallery/151338065/Portfolio    " target="_blank" class="contacts">Behance</a>
+        <a href="https://instagram.com/mishshaa    " target="_blank" class="contacts">Instagram</a>
+    </nav>
 
-<section class="section">
-<div class="content">
-<h2>What am I carrying?</h2>
-<p>My task was to create sound design and music for an exhibition at the Northern River Station of Moscow.</p>
-<p>About project:
-<a href="https://artmoskovia.ru/muzej-transporta-moskvy-otkryl-novuyu-installyacziyu-na-severnom-rechnom-vokzale.html    " target="_blank">
-artmoskovia.ru</a></p>
-<iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2093760270&visual=true    "></iframe>
-</div>
-</section>
+    <!-- ================= PROJECTS ================= -->
 
-<section class="section">
-<div class="content">
-<h2>Small ship, big voyage</h2>
-<p>About project:
-<a href="https://www.afisha.ru/exhibition/malenkomu-korablyu-bolshoe-plavanie-291265/    " target="_blank">
-afisha.ru</a></p>
-<iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1933720127&visual=true    "></iframe>
-</div>
-</section>
+    <section class="section">
+        <div class="content">
+            <h2>What am I carrying?</h2>
+            <p>My task was to create sound design and music for an exhibition at the Northern River Station of Moscow.</p>
+            <p>About project:
+            <a href="https://artmoskovia.ru/muzej-transporta-moskvy-otkryl-novuyu-installyacziyu-na-severnom-rechnom-vokzale.html    " target="_blank">
+            artmoskovia.ru</a></p>
+            <iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2093760270&visual=true    "></iframe>
+        </div>
+    </section>
 
-<section class="section">
-<div class="content">
-<h2>The Moscow River age</h2>
-<p>Four abstract 2-hour compositions imagining how the Moscow River would sound in 2070.</p>
-<p>About project:
-<a href="https://meganom.moscow/project/the-moscow-river-age/    " target="_blank">
-meganom.moscow</a></p>
-<iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/922672369&visual=true    "></iframe>
-</div>
-</section>
+    <section class="section">
+        <div class="content">
+            <h2>Small ship, big voyage</h2>
+            <p>About project:
+            <a href="https://www.afisha.ru/exhibition/malenkomu-korablyu-bolshoe-plavanie-291265/    " target="_blank">
+            afisha.ru</a></p>
+            <iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1933720127&visual=true    "></iframe>
+        </div>
+    </section>
 
-<section class="section">
-<div class="content">
-<h2>Sage of the Sea</h2>
-<p>Audio guide music for Okhotka seafood restaurant in Moscow.</p>
-<p>About project:
-<a href="https://izi.travel/en/09f4-saga-o-more-ohotka/ru    " target="_blank">
-izi.travel</a></p>
-<iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1889710808&visual=true    "></iframe>
-</div>
-</section>
+    <section class="section">
+        <div class="content">
+            <h2>The Moscow River age</h2>
+            <p>Four abstract 2-hour compositions imagining how the Moscow River would sound in 2070.</p>
+            <p>About project:
+            <a href="https://meganom.moscow/project/the-moscow-river-age/    " target="_blank">
+            meganom.moscow</a></p>
+            <iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/922672369&visual=true    "></iframe>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="content">
+            <h2>Sage of the Sea</h2>
+            <p>Audio guide music for Okhotka seafood restaurant in Moscow.</p>
+            <p>About project:
+            <a href="https://izi.travel/en/09f4-saga-o-more-ohotka/ru    " target="_blank">
+            izi.travel</a></p>
+            <iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1889710808&visual=true    "></iframe>
+        </div>
+    </section>
 
 </body>
 </html>
