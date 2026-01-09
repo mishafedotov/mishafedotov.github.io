@@ -4,9 +4,16 @@
 <meta charset="UTF-8">
 <title>art — misha fedotov</title>
 
+<!-- Utah Condensed -->
 <link href="https://fonts.cdnfonts.com/css/utah-condensed" rel="stylesheet">
 
 <style>
+/* ================= BASE ================= */
+
+:root {
+    --image-left: 560px; /* 🔧 МЕНЯЙ ЭТО, ЧТОБЫ СДВИНУТЬ КАРТИНКИ ВПРАВО/ВЛЕВО */
+}
+
 body {
     margin: 0;
     background-color: #ffffff;
@@ -14,7 +21,7 @@ body {
     color: #000;
 }
 
-/* ===== MENU (ФИНАЛ, КАК ТЫ ДАЛ) ===== */
+/* ================= MENU (ФИНАЛ) ================= */
 
 .menu {
     position: fixed;
@@ -23,7 +30,7 @@ body {
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     z-index: 10;
 }
 
@@ -34,15 +41,23 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color: #000;
-    line-height: 0.95;
+    line-height: 1; /* 🔑 одинаковый ритм */
+    border-bottom: 1px solid transparent;
+    width: fit-content;
+}
+
+.menu a:hover {
+    border-bottom: 1px solid #000;
 }
 
 .menu .contacts {
     font-size: 18px;
     text-transform: capitalize;
+    letter-spacing: 0.8px;
+    line-height: 1;
 }
 
-/* ===== PROJECT SECTIONS ===== */
+/* ================= SECTIONS ================= */
 
 .section {
     position: relative;
@@ -50,24 +65,24 @@ body {
     overflow: hidden;
 }
 
-/* ФОН ПРОЕКТА */
+/* ФОНОВАЯ КАРТИНКА ПРОЕКТА */
 .section::before {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 600px;          /* 🔑 центр между меню и текстом */
+    left: var(--image-left); /* 🔧 ключевая точка */
     right: 0;
     background-size: cover;
     background-position: center;
     z-index: 0;
 }
 
-/* ТЕКСТ */
+/* ТЕКСТ ПРОЕКТА */
 .content {
     position: relative;
     z-index: 1;
-    margin-left: 500px;
+    margin-left: calc(var(--image-left) + 40px);
     padding: 120px 80px;
     max-width: 520px;
     color: #fff;
@@ -77,16 +92,16 @@ h2 {
     font-size: 52px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 24px;
+    margin: 0 0 24px 0;
 }
 
 p {
     font-size: 18px;
     line-height: 1.4;
-    margin-bottom: 16px;
+    margin: 0 0 16px 0;
 }
 
-a {
+.content a {
     color: #fff;
     text-decoration: underline;
 }
@@ -94,7 +109,7 @@ a {
 /* ЭМБЕДЫ */
 iframe {
     width: 100%;
-    height: 220px;
+    height: 200px;
     border: none;
     margin-top: 24px;
 }
@@ -103,25 +118,30 @@ iframe {
 
 <body>
 
+<!-- ================= MENU ================= -->
+
 <nav class="menu">
     <a href="index.html">misha fedotov</a>
+
     <a href="art.html">art</a>
     <a href="ad.html">ad</a>
     <a href="gamedev.html">gamedev</a>
 
-    <a href="https://t.me/mishafedotov" class="contacts">Telegram</a>
-    <a href="https://soundcloud.com/misha_fedotov/" class="contacts">Soundcloud</a>
-    <a href="https://behance.net/gallery/151338065/Portfolio" class="contacts">Behance</a>
-    <a href="https://instagram.com/mishshaa" class="contacts">Instagram</a>
+    <a href="https://t.me/mishafedotov" target="_blank" class="contacts">Telegram</a>
+    <a href="https://soundcloud.com/misha_fedotov/" target="_blank" class="contacts">Soundcloud</a>
+    <a href="https://behance.net/gallery/151338065/Portfolio" target="_blank" class="contacts">Behance</a>
+    <a href="https://instagram.com/mishshaa" target="_blank" class="contacts">Instagram</a>
 </nav>
 
-<!-- WHAT AM I CARRYING -->
+<!-- ================= WHAT AM I CARRYING ================= -->
+
 <section class="section" style="--bg:url('art/what-am-i-carrying-1.jpg');">
 <style>
 .section:nth-of-type(1)::before {
     background-image: url('art/what-am-i-carrying-1.jpg');
 }
 </style>
+
 <div class="content">
 <h2>What am I carrying?</h2>
 
@@ -142,13 +162,15 @@ src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/so
 </div>
 </section>
 
-<!-- SMALL SHIP -->
+<!-- ================= SMALL SHIP ================= -->
+
 <section class="section">
 <style>
 .section:nth-of-type(2)::before {
     background-image: url('art/small-ship-big-voyage-1.jpg');
 }
 </style>
+
 <div class="content">
 <h2>Small ship, big voyage</h2>
 
@@ -165,19 +187,25 @@ src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/19
 </div>
 </section>
 
-<!-- MOSCOW RIVER AGE -->
+<!-- ================= MOSCOW RIVER AGE ================= -->
+
 <section class="section">
 <style>
 .section:nth-of-type(3)::before {
     background-image: url('art/moscow-river-age-1.jpg');
 }
 </style>
+
 <div class="content">
 <h2>The Moscow River age</h2>
 
 <p>
 My task was to create 4 abstract music compositions, each with a duration of 2 hours, to imagine how the Moscow river would sound in 2070.
-I used sounds of nature, people swimming, wind, industrial machines and electronic instruments.
+According to the project’s idea, in the future people will stop using the Moscow River for industrial purposes and will become more environmentally responsible.
+</p>
+
+<p>
+To reproduce the atmosphere of the future, I used sounds of nature, people swimming, wind, industrial machines, demolition hammers, motors, computers and electronic instruments.
 </p>
 
 <p>
@@ -193,19 +221,26 @@ src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists
 </div>
 </section>
 
-<!-- SAGE OF THE SEA -->
+<!-- ================= SAGE OF THE SEA ================= -->
+
 <section class="section">
 <style>
 .section:nth-of-type(4)::before {
     background-image: url('art/sage-of-the-sea-1.jpg');
 }
 </style>
+
 <div class="content">
 <h2>Sage of the Sea</h2>
 
 <p>
 Okhotka is a seafood restaurant in Moscow.
-I created nine musical compositions with actors’ voices for the audio guide of the flagship restaurant.
+I was invited to participate in the creation of an audio guide for the flagship restaurant.
+</p>
+
+<p>
+My task was to create nine small musical compositions with actors' voices.
+I created a minimalistic piano melody and added nature sounds and sound effects.
 </p>
 
 <p>
