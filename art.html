@@ -15,7 +15,7 @@
             color: #000;
         }
 
-        /* ===== FINAL MENU (UNCHANGED) ===== */
+        /* ===== FINAL MENU (AS PROVIDED) ===== */
 
         .menu {
             position: fixed;
@@ -25,6 +25,7 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
+            z-index: 10;
         }
 
         .menu a {
@@ -53,24 +54,22 @@
         /* ===== ART CONTENT ===== */
 
         .content {
-            margin-left: 320px;       /* зона меню */
-            padding: 100px 40px;
-        }
-
-        .content-inner {
-            max-width: 720px;
-            margin: 0 auto;           /* центр между меню и правым краем */
+            margin-left: 320px;
         }
 
         .project {
-            margin-bottom: 140px;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
         }
 
-        .project img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 24px;
+        .project-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            background: rgba(255,255,255,0.85);
         }
 
         .project h2 {
@@ -94,96 +93,87 @@
 </head>
 <body>
 
-    <!-- MENU -->
-    <nav class="menu">
-        <a href="index.html">misha fedotov</a>
-        <a href="art.html">art</a>
-        <a href="ad.html">ad</a>
-        <a href="gamedev.html">gamedev</a>
+<!-- MENU -->
+<nav class="menu">
+    <a href="index.html">misha fedotov</a>
+    <a href="art.html">art</a>
+    <a href="ad.html">ad</a>
+    <a href="gamedev.html">gamedev</a>
 
-        <a href="https://t.me/mishafedotov" target="_blank" class="contacts">Telegram</a>
-        <a href="https://soundcloud.com/misha_fedotov/" target="_blank" class="contacts">Soundcloud</a>
-        <a href="https://behance.net/gallery/151338065/Portfolio" target="_blank" class="contacts">Behance</a>
-        <a href="https://instagram.com/mishshaa" target="_blank" class="contacts">Instagram</a>
-    </nav>
+    <a href="https://t.me/mishafedotov" target="_blank" class="contacts">Telegram</a>
+    <a href="https://soundcloud.com/misha_fedotov/" target="_blank" class="contacts">Soundcloud</a>
+    <a href="https://behance.net/gallery/151338065/Portfolio" target="_blank" class="contacts">Behance</a>
+    <a href="https://instagram.com/mishshaa" target="_blank" class="contacts">Instagram</a>
+</nav>
 
-    <!-- CONTENT -->
-    <main class="content">
-        <div class="content-inner">
+<main class="content">
 
-            <!-- PROJECT 1 -->
-            <div class="project">
-                <img src="art/what-am-i-carrying-1.jpg" alt="What am I carrying">
-
-                <h2>What am I carrying?</h2>
-                <p>
+    <!-- PROJECT 1 -->
+    <section class="project" style="background-image:url('art/what-am-i-carrying-1.jpg')">
+        <div class="project-inner">
+            <h2>What am I carrying?</h2>
+            <p>
 About project:
 https://artmoskovia.ru/muzej-transporta-moskvy-otkryl-novuyu-installyacziyu-na-severnom-rechnom-vokzale.html
-                </p>
+            </p>
 
-                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2093760270&auto_play=false&visual=true">
-                </iframe>
-            </div>
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2093760270&auto_play=false&visual=true">
+            </iframe>
+        </div>
+    </section>
 
-            <!-- PROJECT 2 -->
-            <div class="project">
-                <img src="art/small-ship-big-voyage-1.jpg" alt="Small Ship">
-
-                <h2>Small Ship</h2>
-                <p>
+    <!-- PROJECT 2 -->
+    <section class="project" style="background-image:url('art/small-ship-big-voyage-1.jpg')">
+        <div class="project-inner">
+            <h2>Small Ship</h2>
+            <p>
 About project:
 https://www.afisha.ru/exhibition/malenkomu-korablyu-bolshoe-plavanie-291265/
-                </p>
+            </p>
 
-                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1933720127&auto_play=false&visual=true">
-                </iframe>
-            </div>
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1933720127&auto_play=false&visual=true">
+            </iframe>
+        </div>
+    </section>
 
-            <!-- PROJECT 3 -->
-            <div class="project">
-                <img src="art/moscow-river-age-1.jpg" alt="The Moscow River Age">
-
-                <h2>The Moscow River Age / Triennale di Milano</h2>
-                <p>
-My task was to create 4 abstract music compositions, each with a duration of 2 hours, to imagine how the Moscow river would sound in 2070, and what sounds there would be heard.
-
-In the future people will stop using the Moscow River for industrial purposes and will become more environmentally responsible. Therefore, in 2070 the water in Moscow river will be clean and suitable for recreation.
-
-To reproduce the atmosphere of the future, I collected sounds of industrial machines, demolition hammers, drills, motors, computers and transformed them with effects.
+    <!-- PROJECT 3 -->
+    <section class="project" style="background-image:url('art/moscow-river-age-1.jpg')">
+        <div class="project-inner">
+            <h2>The Moscow River Age / Triennale di Milano</h2>
+            <p>
+My task was to create 4 abstract music compositions, each with a duration of 2 hours, to imagine how the Moscow river would sound in 2070…
 
 About project:
 https://meganom.moscow/project/the-moscow-river-age/
-                </p>
+            </p>
 
-                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/922672369&auto_play=false&visual=true">
-                </iframe>
-            </div>
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/922672369&auto_play=false&visual=true">
+            </iframe>
+        </div>
+    </section>
 
-            <!-- PROJECT 4 -->
-            <div class="project">
-                <img src="art/sage-of-the-sea-1.jpg" alt="Saga of the Sea">
-
-                <h2>Saga of the Sea</h2>
-                <p>
+    <!-- PROJECT 4 -->
+    <section class="project" style="background-image:url('art/sage-of-the-sea-1.jpg')">
+        <div class="project-inner">
+            <h2>Saga of the Sea</h2>
+            <p>
 Okhotka is a seafood restaurant in Moscow.
-I was invited to participate in the creation of an audio guide for the flagship restaurant.
-
-My task was to create nine small musical compositions with actors' voices.
+I was invited to participate in the creation of an audio guide…
 
 About project:
 https://izi.travel/en/09f4-saga-o-more-ohotka/ru#abd6-barelef/ru
-                </p>
+            </p>
 
-                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1889710808&auto_play=false&visual=true">
-                </iframe>
-            </div>
-
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1889710808&auto_play=false&visual=true">
+            </iframe>
         </div>
-    </main>
+    </section>
+
+</main>
 
 </body>
 </html>
