@@ -23,40 +23,38 @@ body {
 
 /* ================= MENU (ФИНАЛ) ================= */
 
-.menu {
-    position: fixed;
-    top: 50%;
-    left: 40px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    z-index: 10;
-}
+        .menu {
+            position: fixed;
+            top: 50%;
+            left: 40px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 8px; /* теперь РЕАЛЬНО работает */
+        }
 
-.menu a {
-    font-size: 52px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #000;
-    line-height: 1; /* 🔑 одинаковый ритм */
-    border-bottom: 1px solid transparent;
-    width: fit-content;
-}
+        .menu a {
+            font-size: 52px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #000;
+            width: fit-content;
+            line-height: 0.95; /* 🔑 КЛЮЧЕВОЙ ФИКС */
+            border-bottom: 1px solid transparent;
+        }
 
-.menu a:hover {
-    border-bottom: 1px solid #000;
-}
+        .menu a:hover {
+            border-bottom: 1px solid #000;
+        }
 
-.menu .contacts {
-    font-size: 18px;
-    text-transform: capitalize;
-    letter-spacing: 0.8px;
-    line-height: 1;
-}
-
+        .menu .contacts {
+            font-size: 18px;
+            text-transform: capitalize;
+            letter-spacing: 0.8px;
+            line-height: 1.1; /* отдельно для мелкого текста */
+        }
 /* ================= SECTIONS ================= */
 
 .section {
@@ -132,6 +130,7 @@ iframe {
     <a href="https://behance.net/gallery/151338065/Portfolio" target="_blank" class="contacts">Behance</a>
     <a href="https://instagram.com/mishshaa" target="_blank" class="contacts">Instagram</a>
 </nav>
+
 
 <!-- ================= WHAT AM I CARRYING ================= -->
 
