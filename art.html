@@ -10,7 +10,7 @@
 /* ================= BASE ================= */
 
 :root {
-    --image-left: 530px; /* 🔧 МЕНЯЙ ЭТО, ЧТОБЫ СДВИНУТЬ КАРТИНКИ */
+    --image-left: 530px;
 }
 
 * {
@@ -19,6 +19,7 @@
 
 body {
     margin: 0;
+    height: 100vh;
     background-color: #ffffff;
     font-family: 'Utah Condensed', Arial, sans-serif;
     color: #000;
@@ -58,6 +59,7 @@ body {
     letter-spacing: 0.8px;
     line-height: 1.1;
 }
+
 /* ================= SECTIONS ================= */
 
 .section {
@@ -77,6 +79,20 @@ body {
     background-size: cover;
     background-position: center;
     z-index: 0;
+}
+
+/* Явное назначение фонов по порядку */
+.section:nth-of-type(1)::before {
+    background-image: url('art/what-am-i-carrying-1.jpg');
+}
+.section:nth-of-type(2)::before {
+    background-image: url('art/small-ship-big-voyage-1.jpg');
+}
+.section:nth-of-type(3)::before {
+    background-image: url('art/moscow-river-age-1.jpg');
+}
+.section:nth-of-type(4)::before {
+    background-image: url('art/sage-of-the-sea-1.jpg');
 }
 
 /* ТЕКСТ */
@@ -136,67 +152,55 @@ iframe {
 
 <!-- ================= PROJECTS ================= -->
 
-<section class="section" style="background-image:none;">
-<style>
-.section:nth-of-type(1)::before {
-    background-image: url('art/what-am-i-carrying-1.jpg');
-}
-</style>
-<div class="content">
-<h2>What am I carrying?</h2>
-<p>My task was to create sound design and music for an exhibition at the Northern River Station of Moscow.</p>
-<p>About project:
-<a href="https://artmoskovia.ru/muzej-transporta-moskvy-otkryl-novuyu-installyacziyu-na-severnom-rechnom-vokzale.html" target="_blank">
-artmoskovia.ru</a></p>
-<iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2093760270&visual=true"></iframe>
-</div>
+<section class="section">
+    <div class="content">
+        <h2>What am I carrying?</h2>
+        <p>My task was to create sound design and music for an exhibition at the Northern River Station of Moscow.</p>
+        <p>About project:
+            <a href="https://artmoskovia.ru/muzej-transporta-moskvy-otkryl-novuyu-installyacziyu-na-severnom-rechnom-vokzale.html" target="_blank">
+                artmoskovia.ru
+            </a>
+        </p>
+        <iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2093760270&visual=true"></iframe>
+    </div>
 </section>
 
 <section class="section">
-<style>
-.section:nth-of-type(2)::before {
-    background-image: url('art/small-ship-big-voyage-1.jpg');
-}
-</style>
-<div class="content">
-<h2>Small ship, big voyage</h2>
-<p>About project:
-<a href="https://www.afisha.ru/exhibition/malenkomu-korablyu-bolshoe-plavanie-291265/" target="_blank">
-afisha.ru</a></p>
-<iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1933720127&visual=true"></iframe>
-</div>
+    <div class="content">
+        <h2>Small ship, big voyage</h2>
+        <p>About project:
+            <a href="https://www.afisha.ru/exhibition/malenkomu-korablyu-bolshoe-plavanie-291265/" target="_blank">
+                afisha.ru
+            </a>
+        </p>
+        <iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1933720127&visual=true"></iframe>
+    </div>
 </section>
 
 <section class="section">
-<style>
-.section:nth-of-type(3)::before {
-    background-image: url('art/moscow-river-age-1.jpg');
-}
-</style>
-<div class="content">
-<h2>The Moscow River age</h2>
-<p>Four abstract 2-hour compositions imagining how the Moscow River would sound in 2070.</p>
-<p>About project:
-<a href="https://meganom.moscow/project/the-moscow-river-age/" target="_blank">
-meganom.moscow</a></p>
-<iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/922672369&visual=true"></iframe>
-</div>
+    <div class="content">
+        <h2>The Moscow River age</h2>
+        <p>Four abstract 2-hour compositions imagining how the Moscow River would sound in 2070.</p>
+        <p>About project:
+            <a href="https://meganom.moscow/project/the-moscow-river-age/" target="_blank">
+                meganom.moscow
+            </a>
+        </p>
+        <iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/922672369&visual=true"></iframe>
+    </div>
 </section>
 
 <section class="section">
-<style>
-.section:nth-of-type(4)::before {
-    background-image: url('art/sage-of-the-sea-1.jpg');
-}
-</style>
-<div class="content">
-<h2>Sage of the Sea</h2>
-<p>Audio guide music for Okhotka seafood restaurant in Moscow.</p>
-<p>About project:
-<a href="https://izi.travel/en/09f4-saga-o-more-ohotka/ru" target="_blank">
-izi.travel</a></p>
-<iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1889710808&visual=true"></iframe>
-</div>
+    <div class="content">
+        <h2>Sage of the Sea</h2>
+        <p>Audio guide music for Okhotka seafood restaurant in Moscow.</p>
+        <p>About project:
+            <a href="https://izi.travel/en/09f4-saga-o-more-ohotka/ru" target="_blank">
+                izi.travel
+            </a>
+        </p>
+        <iframe allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1889710808&visual=true"></iframe>
+    </div>
 </section>
 
 </body>
