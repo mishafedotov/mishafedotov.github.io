@@ -10,12 +10,12 @@
     <style>
         body {
             margin: 0;
-            background-color: #ffffff;
+            background-color: #000;
             font-family: 'Utah Condensed', Arial, sans-serif;
-            color: #000;
+            color: #fff;
         }
 
-        /* ===== FINAL MENU (AS PROVIDED) ===== */
+        /* ===== FINAL MENU (UNCHANGED) ===== */
 
         .menu {
             position: fixed;
@@ -34,14 +34,14 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             text-decoration: none;
-            color: #000;
+            color: #fff;
             width: fit-content;
             line-height: 0.95;
             border-bottom: 1px solid transparent;
         }
 
         .menu a:hover {
-            border-bottom: 1px solid #000;
+            border-bottom: 1px solid #fff;
         }
 
         .menu .contacts {
@@ -54,22 +54,26 @@
         /* ===== ART CONTENT ===== */
 
         .content {
-            margin-left: 320px;
+            margin-left: 320px; /* зона меню */
+            padding: 80px 40px;
         }
 
         .project {
-            min-height: 100vh;
-            background-size: cover;
-            background-position: center;
             display: flex;
             align-items: center;
+            gap: 60px;
+            margin-bottom: 120px; /* небольшие промежутки между проектами */
         }
 
-        .project-inner {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 80px 40px;
-            background: rgba(255,255,255,0.85);
+        .project-image {
+            flex: 1;
+            min-height: 420px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-text {
+            flex: 1;
         }
 
         .project h2 {
@@ -109,8 +113,10 @@
 <main class="content">
 
     <!-- PROJECT 1 -->
-    <section class="project" style="background-image:url('art/what-am-i-carrying-1.jpg')">
-        <div class="project-inner">
+    <section class="project">
+        <div class="project-image" style="background-image:url('art/what-am-i-carrying/1.jpg')"></div>
+
+        <div class="project-text">
             <h2>What am I carrying?</h2>
             <p>
 About project:
@@ -124,8 +130,10 @@ https://artmoskovia.ru/muzej-transporta-moskvy-otkryl-novuyu-installyacziyu-na-s
     </section>
 
     <!-- PROJECT 2 -->
-    <section class="project" style="background-image:url('art/small-ship-big-voyage-1.jpg')">
-        <div class="project-inner">
+    <section class="project">
+        <div class="project-image" style="background-image:url('art/small-ship/1.jpg')"></div>
+
+        <div class="project-text">
             <h2>Small Ship</h2>
             <p>
 About project:
@@ -139,8 +147,10 @@ https://www.afisha.ru/exhibition/malenkomu-korablyu-bolshoe-plavanie-291265/
     </section>
 
     <!-- PROJECT 3 -->
-    <section class="project" style="background-image:url('art/moscow-river-age-1.jpg')">
-        <div class="project-inner">
+    <section class="project">
+        <div class="project-image" style="background-image:url('art/moscow-river-age/1.jpg')"></div>
+
+        <div class="project-text">
             <h2>The Moscow River Age / Triennale di Milano</h2>
             <p>
 My task was to create 4 abstract music compositions, each with a duration of 2 hours, to imagine how the Moscow river would sound in 2070…
@@ -156,12 +166,14 @@ https://meganom.moscow/project/the-moscow-river-age/
     </section>
 
     <!-- PROJECT 4 -->
-    <section class="project" style="background-image:url('art/sage-of-the-sea-1.jpg')">
-        <div class="project-inner">
+    <section class="project">
+        <div class="project-image" style="background-image:url('art/saga-of-the-sea/1.jpg')"></div>
+
+        <div class="project-text">
             <h2>Saga of the Sea</h2>
             <p>
 Okhotka is a seafood restaurant in Moscow.
-I was invited to participate in the creation of an audio guide…
+I was invited to participate in the creation of an audio guide for the flagship restaurant.
 
 About project:
 https://izi.travel/en/09f4-saga-o-more-ohotka/ru#abd6-barelef/ru
