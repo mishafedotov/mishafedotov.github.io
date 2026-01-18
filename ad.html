@@ -65,18 +65,19 @@
 
         .section {
             position: relative;
-            height: 100vh;
-            overflow: hidden;
+            height: auto; /* Изменено на auto для прокрутки */
+            min-height: 100vh; /* Минимум 100% высоты экрана */
+            overflow: visible; /* Вместо hidden для прокрутки */
         }
 
         .section::before {
             content: "";
-            position: absolute;
+            position: fixed; /* Изменено на fixed для фиксации фона */
             top: 0;
             bottom: 0;
             left: var(--image-left);
             right: 0;
-            background-image: url('art/AD-font.jpg'); /* Фоновая картинка */
+            background-image: url('ad/AD-font.jpg'); /* Фоновая картинка */
             background-size: cover;
             background-position: center;
             z-index: 0;
@@ -98,6 +99,7 @@
             font-weight: 700;
             text-transform: uppercase;
             margin: 0 0 24px 0;
+            text-align: center; /* Центрирование заголовка */
         }
 
         .video-container {
