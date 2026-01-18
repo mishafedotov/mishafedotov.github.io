@@ -76,16 +76,13 @@
             bottom: 0;
             left: var(--image-left);
             right: 0;
+            background-image: url('art/AD-font.jpg'); /* Фоновая картинка */
             background-size: cover;
             background-position: center;
             z-index: 0;
         }
 
-        /* Фоны для секций (оставляем пустыми, так как контент будет в центре) */
-        .section:nth-of-type(1)::before {
-            background-image: none;
-        }
-
+        /* ТЕКСТ */
         .content {
             position: relative;
             z-index: 1;
@@ -93,7 +90,7 @@
             margin-left: calc(var(--image-left) + 60px);
             margin-right: 60px;
             padding-top: 120px;
-            color: #fff;
+            color: #fff; /* Цвет текста */
         }
 
         h2 {
@@ -101,23 +98,15 @@
             font-weight: 700;
             text-transform: uppercase;
             margin: 0 0 24px 0;
-            color: #000; /* Цвет текста заголовка */
         }
 
-        /* Для центрирования контента на белом фоне */
-        .center-content {
-            position: relative;
-            z-index: 1;
-            padding: 20px;
-            max-width: 800px; /* Максимальная ширина для удобства чтения */
-            margin: 0 auto;
+        .video-container {
+            margin: 40px 0; /* Отступы между видео */
         }
 
-        .center-content iframe {
-            display: block;
-            margin: 40px auto; /* Отступы сверху и снизу между iframe */
-            width: 560px;
-            height: 315px;
+        .video-container iframe {
+            width: 100%; /* На всю ширину контента */
+            height: 400px; /* Увеличенная высота */
             border: none;
         }
     </style>
@@ -139,14 +128,20 @@
 
     <!-- ================= CONTENT SECTION ================= -->
     <section class="section">
-        <div class="center-content">
+        <div class="content">
             <h2>Music & sound design​​​​​​​ for AD videos</h2>
             
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/JUmmdt1l3JM  " frameborder="0" allow=" autoplay; picture-in-picture" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JUmmdt1l3JM  " frameborder="0" allow=" autoplay; picture-in-picture" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+            </div>
             
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/-HWip3gdENY  " frameborder="0" allow=" autoplay; picture-in-picture" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-HWip3gdENY  " frameborder="0" allow=" autoplay; picture-in-picture" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+            </div>
             
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/M8bIbQUraoU  " frameborder="0" allow=" autoplay; picture-in-picture" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/M8bIbQUraoU  " frameborder="0" allow=" autoplay; picture-in-picture" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+            </div>
         </div>
     </section>
 
