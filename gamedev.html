@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <title>gamedev — misha fedotov</title>
 
-    <link href="https://fonts.cdnfonts.com/css/utah-condensed" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/utah-condensed    " rel="stylesheet">
 
     <style>
+        /* ================= BASE ================= */
+
+        :root { 
+            --image-left: 550px; 
+        }
+
+        * {
+            box-sizing: border-box; 
+        }
+
         body {
             margin: 0;
-            height: 100vh;
             background-color: #ffffff;
             font-family: 'Utah Condensed', Arial, sans-serif;
             color: #000;
         }
+
+        /* ================= MENU (СТАБИЛЬНЫЙ) ================= */
 
         .menu {
             position: fixed;
@@ -23,11 +34,13 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
+            z-index: 20;
         }
 
         .menu a {
             font-size: 52px;
             font-weight: 700;
+            display: flex;
             letter-spacing: 1px;
             text-transform: uppercase;
             text-decoration: none;
@@ -48,32 +61,134 @@
             line-height: 1.1;
         }
 
+        /* ================= SECTIONS ================= */
+
+        .section {
+            position: relative;
+            height: auto; /* Изменено на auto для прокрутки */
+            min-height: 100vh; /* Минимум 100% высоты экрана */
+            overflow: visible; /* Вместо hidden для прокрутки */
+        }
+
+        .section::before {
+            content: "";
+            position: fixed; /* Изменено на fixed для фиксации фона */
+            top: 0;
+            bottom: 0;
+            left: var(--image-left);
+            right: 0;
+            background-image: url('art/gamedev-cover.jpg'); /* Статичная фоновая картинка */
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+
         .content {
-            margin-left: 360px;
-            padding-top: 80px;
-            font-size: 28px;
+            position: relative;
+            z-index: 1;
+            width: calc(100% - var(--image-left) - 120px);
+            margin-left: calc(var(--image-left) + 60px);
+            margin-right: 60px;
+            padding-top: 120px;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 52px;
             font-weight: 700;
+            text-transform: uppercase;
+            margin: 0 0 24px 0;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.4;
+            margin: 0 0 16px 0;
+        }
+
+        .content a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Стиль для ссылки "Download playable scene" */
+        .download-link {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.3s ease; /* Плавный переход */
+        }
+
+        .download-link:hover {
+            border-bottom: 1px solid #fff; /* Цвет линии при наведении */
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px; /* Увеличена высота для YouTube видео */
+            border: none;
+            margin-top: 24px;
+            loading: lazy;
         }
     </style>
 </head>
+
 <body>
 
-<nav class="menu">
-    <a href="index.html">misha fedotov</a>
+    <nav class="menu">
+        <a href="index.html">misha fedotov</a>
+        <a href="art.html">art</a>
+        <a href="ad.html">ad</a>
+        <a href="gamedev.html">gamedev</a>
 
-    <a href="art.html">art</a>
-    <a href="ad.html">ad</a>
-    <a href="gamedev.html">gamedev</a>
+        <a href="https://t.me/mishafedotov    " target="_blank" class="contacts">Telegram</a>
+        <a href="https://soundcloud.com/misha_fedotov/    " target="_blank" class="contacts">Soundcloud</a>
+        <a href="https://behance.net/gallery/151338065/Portfolio    " target="_blank" class="contacts">Behance</a>
+        <a href="https://instagram.com/mishshaa    " target="_blank" class="contacts">Instagram</a>
+    </nav>
 
-    <a href="https://t.me/mishafedotov" target="_blank" class="contacts">Telegram</a>
-    <a href="https://soundcloud.com/misha_fedotov/" target="_blank" class="contacts">Soundcloud</a>
-    <a href="https://behance.net/gallery/151338065/Portfolio" target="_blank" class="contacts">Behance</a>
-    <a href="https://instagram.com/mishshaa" target="_blank" class="contacts">Instagram</a>
-</nav>
+    <!-- ================= SOUND REDESIGN RACING MENU ================= -->
+    <section class="section">
+        <div class="content">
+            <h2>Sound Redesign — Racing Menu & Cinematic</h2>
+            <p><strong>Racing Menu & City Intro — Sound Redesign</strong></p>
+            <p><strong>Personal project</strong></p>
 
-<div class="content">
-    Game audio & interactive sound design.
-</div>
+            <p><strong>Goal:</strong> redesign the audio for a racing game menu and cinematic intro, focusing on energy, speed and clean mix for UI and action transition.</p>
+            <p><strong>Video</strong></p>
+
+            <p><strong>What I did:</strong></p>
+            <p>Full SFX redesign for UI and transitions</p>
+            <p>Engine and vehicle pass-by sound design</p>
+            <p>Original music composition</p>
+            <p>Ambient layers and city atmosphere</p>
+            <p>Final mix and mastering for video</p>
+
+            <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vhgya-ek0jo?si=45FXFotNQdW48lrB  " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- ================= INTERACTIVE RACING SCENE ================= -->
+    <section class="section">
+        <div class="content">
+            <h2>Interactive Racing Scene (Unity + FMOD)</h2>
+            <p><strong>Interactive Racing Scene — Unity / FMOD</strong></p>
+            <p><strong>Personal interactive project</strong></p>
+
+            <p><strong>Goal:</strong> build a small playable driving scene and implement a responsive vehicle audio system.</p>
+            <p><strong>Video</strong></p>
+
+            <p><strong>What I did:</strong></p>
+            <p>Engine sound design using real car recordings</p>
+            <p>Manual editing and reconstruction of RPM layers</p>
+            <p>Gear shifting behaviour and acceleration response</p>
+            <p>Tire skid sounds during turns</p>
+            <p>Implementation in FMOD and integration with Unity</p>
+            <p><a href="https://drive.google.com/drive/folders/13ut38VviHyNPq7HSRKHCfpIBRxp1mA7E?usp=sharing" target="_blank" class="download-link">Download playable scene</a></p>
+
+            <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/B7FF1Sp_egk?si=oB-wDtEbAHzykXy8   " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
 
 </body>
 </html>
