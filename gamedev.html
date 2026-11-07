@@ -36,13 +36,39 @@
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
             .menu {
-                position: fixed; top: 0; left: -100%; width: 100%; height: 100vh; background-color: #ffffff;
-                transform: none; flex-direction: column; justify-content: center; align-items: center; gap: 12px;
-                transition: left 0.3s ease; z-index: 99;
+                position: fixed;
+                top: 50%;
+                left: 20px;
+                transform: translateY(-50%) translateX(-20px);
+                width: auto;
+                max-width: 85vw;
+                background-color: #ffffff;
+                padding: 20px 30px;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                flex-direction: column;
+                gap: 10px;
+                z-index: 99;
+                opacity: 0;
+                pointer-events: none;
+                transition: all 0.3s ease;
             }
-            .menu.active { left: 0; }
-            .menu a { font-size: 78px; text-align: center; }
-            .menu .contacts { font-size: 27px; }
+            .menu.active {
+                transform: translateY(-50%) translateX(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+            
+            /* ========================================== */
+            /* 🔧 НАСТРОЙКА РАЗМЕРА ШРИФТА (МОБИЛЬНАЯ ВЕРСИЯ) */
+            /* ========================================== */
+            .menu a { 
+                font-size: 38px; /* <-- МЕНЯТЬ РАЗМЕР ЗДЕСЬ */
+                text-align: left; 
+            }
+            .menu .contacts { 
+                font-size: 14px; /* <-- МЕНЯТЬ РАЗМЕР ЗДЕСЬ */
+            }
 
             :root { --image-left: 0px; }
             .section::before { left: 0; right: 0; background-color: rgba(0, 0, 0, 0.4); background-blend-mode: multiply; }
