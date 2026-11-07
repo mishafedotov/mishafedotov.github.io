@@ -41,8 +41,8 @@
             top: 20px; 
             left: 20px; 
             z-index: 100; 
-            background-color: #ffffff;
-            border: 3px solid #000;
+            background: transparent;
+            border: none;
             cursor: pointer; 
             width: 50px;
             height: 50px;
@@ -54,7 +54,7 @@
             top: 50%;
             width: 26px; 
             height: 3px; 
-            background-color: #000;
+            background-color: #fff; /* Белый цвет по умолчанию (на тёмном фоне) */
             margin-left: -13px;
             margin-top: -1.5px;
         }
@@ -65,6 +65,10 @@
             transform: translateY(6px);
         }
         
+        /* При открытом меню — полоски становятся чёрными (на белом фоне меню) */
+        .menu-toggle.active span { 
+            background-color: #000;
+        }
         .menu-toggle.active span:nth-child(1) { 
             transform: rotate(45deg);
         }
