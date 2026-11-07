@@ -23,7 +23,7 @@
             gap: 8px;
         }
         .menu a {
-            font-size: 32px;
+            font-size: 52px;
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -35,42 +35,18 @@
         }
         .menu a:hover { border-bottom: 1px solid #000; }
         .menu .contacts {
-            font-size: 12px;
+            font-size: 18px;
             text-transform: capitalize;
             letter-spacing: 0.8px;
             line-height: 1.1;
         }
 
         /* ================= MOBILE VERSION ================= */
-        .menu-toggle {
-            display: none;
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 100;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-        }
-        .menu-toggle span {
-            display: block;
-            width: 30px;
-            height: 3px;
-            background-color: #000;
-            margin: 6px 0;
-            transition: 0.3s;
-        }
-        .menu-toggle.active span:nth-child(1) { transform: rotate(-45deg) translate(-6px, 6px); }
-        .menu-toggle.active span:nth-child(2) { opacity: 0; }
-        .menu-toggle.active span:nth-child(3) { transform: rotate(45deg) translate(-6px, -6px); }
-
         @media (max-width: 768px) {
-            .menu-toggle { display: block; }
             .menu {
                 position: fixed;
                 top: 0;
-                left: -100%;
+                left: 0; /* Всегда открыто на главной */
                 width: 100%;
                 height: 100vh;
                 background-color: #ffffff;
@@ -79,23 +55,26 @@
                 justify-content: center;
                 align-items: center;
                 gap: 12px;
-                transition: left 0.3s ease;
                 z-index: 99;
             }
-            .menu.active { left: 0; }
-            .menu a { font-size: 78px; text-align: center; } /* 52px * 1.5 */
-            .menu .contacts { font-size: 27px; } /* 18px * 1.5 */
+            
+            /* ========================================== */
+            /* 🔧 НАСТРОЙКА РАЗМЕРА ШРИФТА (МОБИЛЬНАЯ ВЕРСИЯ) */
+            /* Измени значение font-size ниже, чтобы сделать текст меню на телефоне больше или меньше */
+            /* ========================================== */
+            .menu a { 
+                font-size: 48px; /* <-- МЕНЯТЬ РАЗМЕР ЗДЕСЬ (например: 40px, 52px) */
+                text-align: center; 
+            }
+            .menu .contacts { 
+                font-size: 24px; /* <-- МЕНЯТЬ РАЗМЕР ЗДЕСЬ для ссылок соцсетей */
+            }
         }
     </style>
 </head>
 <body>
 
-    <button class="menu-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
+    <!-- Кнопки меню нет, оно всегда видно -->
     <nav class="menu active">
         <a href="index.html">misha fedotov</a>
         <a href="art.html">art</a>
@@ -107,23 +86,5 @@
         <a href="https://instagram.com/mishshaa" target="_blank" class="contacts">Instagram</a>
     </nav>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const menu = document.querySelector('.menu');
-            if (menuToggle && menu) {
-                menuToggle.addEventListener('click', () => {
-                    menu.classList.toggle('active');
-                    menuToggle.classList.toggle('active');
-                });
-                menu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        menu.classList.remove('active');
-                        menuToggle.classList.remove('active');
-                    });
-                });
-            }
-        });
-    </script>
 </body>
 </html>
