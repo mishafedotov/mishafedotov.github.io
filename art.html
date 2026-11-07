@@ -44,13 +44,39 @@
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
             .menu {
-                position: fixed; top: 0; left: -100%; width: 100%; height: 100vh; background-color: #ffffff;
-                transform: none; flex-direction: column; justify-content: center; align-items: center; gap: 12px;
-                transition: left 0.3s ease; z-index: 99;
+                position: fixed;
+                top: 50%;
+                left: 20px; /* Выравнивание по левому краю, как на десктопе */
+                transform: translateY(-50%) translateX(-20px);
+                width: auto;
+                max-width: 85vw;
+                background-color: #ffffff;
+                padding: 20px 30px;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                flex-direction: column;
+                gap: 10px;
+                z-index: 99;
+                opacity: 0;
+                pointer-events: none;
+                transition: all 0.3s ease;
             }
-            .menu.active { left: 0; }
-            .menu a { font-size: 78px; text-align: center; }
-            .menu .contacts { font-size: 27px; }
+            .menu.active {
+                transform: translateY(-50%) translateX(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+            
+            /* ========================================== */
+            /* 🔧 НАСТРОЙКА РАЗМЕРА ШРИФТА (МОБИЛЬНАЯ ВЕРСИЯ) */
+            /* ========================================== */
+            .menu a { 
+                font-size: 38px; /* <-- МЕНЯТЬ РАЗМЕР ЗДЕСЬ */
+                text-align: left; 
+            }
+            .menu .contacts { 
+                font-size: 14px; /* <-- МЕНЯТЬ РАЗМЕР ЗДЕСЬ */
+            }
 
             :root { --image-left: 0px; }
             .section { height: auto; min-height: 100vh; overflow: visible; }
@@ -79,7 +105,6 @@
         <a href="https://instagram.com/mishshaa" target="_blank" class="contacts">Instagram</a>
     </nav>
 
-    <!-- Секции без изменений -->
     <section class="section"><div class="content"><h2>VELVET WAY</h2><p><strong>Music & sound design for exhibition "VELVET WAY"</strong> Moscow Transport Museum</p><p><strong>Scope of work:</strong> Music creation, sound design, mixing and processing</p><p><strong>About project:</strong> <a href="https://mtmuseum.ru/affiche/barkhatnyy-put/" target="_blank">mtmuseum.ru</a></p><iframe class="large-iframe" loading="lazy" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2422790529&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a href="https://soundcloud.com/misha_fedotov" title="Misha Fedotov" target="_blank" style="color: #cccccc; text-decoration: none;">Misha Fedotov</a> · <a href="https://soundcloud.com/misha_fedotov/velvet-way-mtmuseum" title="Velvet way | MTMuseum" target="_blank" style="color: #cccccc; text-decoration: none;">Velvet way | MTMuseum</a></div></div></section>
     <section class="section"><div class="content"><h2>INOMARKA</h2><p><strong>Music &amp; sound design for exhibition "INOMARKA"</strong> Moscow Transport Museum</p><p><strong>Scope of work:</strong> Music creation, sound design, mixing and processing</p><p><strong>About project:</strong> <a href="https://mtmuseum.ru/inomarka" target="_blank">mtmuseum.ru/inomarka</a></p><iframe class="large-iframe" loading="lazy" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2250030386&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;"><a href="https://soundcloud.com/misha_fedotov" title="Misha Fedotov" target="_blank" style="color: #cccccc; text-decoration: none;">Misha Fedotov</a> · <a href="https://soundcloud.com/misha_fedotov/sets/inomarka" title="inomarka" target="_blank" style="color: #cccccc; text-decoration: none;">inomarka</a></div></div></section>
     <section class="section"><div class="content"><h2>High Underground</h2><p><strong>Music & sound design for exhibition "High Underground"</strong> Museum of Moscow</p><p><strong>Scope of work:</strong> Music creation, sound design, mixing and processing</p><p><strong>About project:</strong> <a href="https://mtmuseum.ru/visoko-pod-zemlei" target="_blank">mtmuseum.ru</a></p><iframe loading="lazy" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2043940254&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div></section>
